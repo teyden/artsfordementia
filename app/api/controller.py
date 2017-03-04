@@ -16,15 +16,15 @@ def index():
   return render_template('index.html')
 
 # Routes to static assets
-@app.route('/<path:path>')
+@api.route('/<path:path>')
 def send_js(path):
   return send_from_directory('js', path)
 
-@app.route('/style/<path:path>')
+@api.route('/style/<path:path>')
 def send_css(path):
   return send_from_directory('css', path)
 
-@app.route('/<path:path>')
+@api.route('/<path:path>')
 def send_images(path):
   return send_from_directory('images', path)
 
