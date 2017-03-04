@@ -4,7 +4,7 @@ from flask import session as login_session
 import random, string
 
 from flask import render_template, url_for, flash
-from flask import make_response, request, redirect, jsonify
+from flask import make_response, request, redirect, jsonify, send_from_directory
 
 # Import model
 # from app.api.model import Users, Stories, Adventures, Articles
@@ -13,18 +13,11 @@ api = Blueprint('api', __name__, url_prefix='/')
 
 @api.route("/")
 def index():
+  # return render_template('index.html')
   return render_template('index.html')
 
 # Routes to static assets
-@api.route('/<path:path>')
-def send_js(path):
-  return send_from_directory('js', path)
-
-@api.route('/style/<path:path>')
-def send_css(path):
-  return send_from_directory('css', path)
-
-@api.route('/<path:path>')
+@api.route('/images/<path:path>')
 def send_images(path):
   return send_from_directory('images', path)
 
