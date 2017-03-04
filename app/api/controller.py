@@ -13,7 +13,6 @@ api = Blueprint('api', __name__, url_prefix='/')
 
 @api.route("/")
 def index():
-  # return render_template('index.html')
   return render_template('index.html')
 
 # Routes to static assets
