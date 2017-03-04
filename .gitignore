@@ -1,4 +1,3 @@
 .python-version
-node_modules/
 *.pyc
 venv/
