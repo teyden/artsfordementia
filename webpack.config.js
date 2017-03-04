@@ -4,7 +4,7 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    publicPath: '/',
+    publicPath: '/static/js',
     filename: 'bundle.js'
   },
   module: {
@@ -21,6 +21,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './app/templates'
+    contentBase: './app/templates/dev'
   }
 };
