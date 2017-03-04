@@ -7,7 +7,7 @@ from flask import render_template, url_for, flash
 from flask import make_response, request, redirect, jsonify, send_from_directory
 
 # Import model
-# from app.api.model import Users, Stories, Adventures, Articles
+from app.api.model import db
 
 api = Blueprint('api', __name__, url_prefix='/')
 
