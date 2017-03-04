@@ -1,12 +1,8 @@
-from flask import Flask
-
 from flask import session as login_session
 import random, string
 
 from flask import render_template, url_for, flash
 from flask import make_response, request, redirect, jsonify
-
-app = Flask(__name__)
 
 @app.route("/")
 def hello():
@@ -53,8 +49,3 @@ def getArticle(article_id):
   Returns a single article.
   """
   pass
-
-
-if __name__ == "__main__":
-  app.debug = True
-  app.run()
