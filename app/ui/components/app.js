@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
           <Nav />
-          { this.props.children }
+              { this.props.children }
           <Footer />
       </div>
     );
