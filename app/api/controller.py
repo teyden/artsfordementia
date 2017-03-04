@@ -4,10 +4,10 @@ from flask import session as login_session
 import random, string
 
 from flask import render_template, url_for, flash
-from flask import make_response, request, redirect, jsonify
+from flask import make_response, request, redirect, jsonify, send_from_directory
 
 # Import model
-# from app.api.model import Users, Stories, Adventures, Articles
+from app.api.model import db
 
 api = Blueprint('api', __name__, url_prefix='/')
 
@@ -15,6 +15,12 @@ api = Blueprint('api', __name__, url_prefix='/')
 def index():
   return render_template('index.html')
 
+# Routes to static assets
+@api.route('/images/<path:path>')
+def send_images(path):
+  return send_from_directory('images', path)
+
+# REST endpoints
 @api.route("/api/stories", methods=["GET", "POST"])
 def getStories():
   """
