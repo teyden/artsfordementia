@@ -1,9 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-export default class App extends Component {
+import Nav from './nav'
+import Footer from './footer'
+
+class App extends Component {
   render() {
     return (
-      <div>React simple starter</div>
+      <div>
+          <Nav />
+          { this.props.children }
+          <Footer />
+      </div>
     );
   }
 }
+
+export default App

@@ -25,10 +25,10 @@
     "material-ui": "^0.17.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
-    "react-promise": "^1.1.2",
     "react-redux": "^4.0.0",
     "react-router": "^2.8.1",
     "react-tap-event-plugin": "^2.0.1",
-    "redux": "^3.0.4"
+    "redux": "^3.0.4",
+    "redux-promise": "^0.5.3"
   }
 }
