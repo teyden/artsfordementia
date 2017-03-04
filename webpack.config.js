@@ -1,6 +1,6 @@
 module.exports = {
   entry: [
-    './src/index.js'
+    './app/ui/index.js'
   ],
   output: {
     path: __dirname,
@@ -21,6 +21,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './app/templates'
   }
 };
