@@ -12,8 +12,8 @@ from flask import make_response, request, redirect, jsonify
 api = Blueprint('api', __name__, url_prefix='/')
 
 @api.route("/")
-def hello():
-    return "Hello World!!!!!!!!!!!!!!!!!!!!!!!!"
+def index():
+  return render_template('index.html')
 
 @api.route("/api/stories", methods=["GET", "POST"])
 def getStories():
