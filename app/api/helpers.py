@@ -15,7 +15,9 @@ def existsInDB(id, type):
 
 def isValidSeed(json, seed):
   for key in seed.keys():
-    if key not in json:
+    if key == "image" or key == "event_time" or key == "event_date":
+      continue
+    elif key not in json:
       return False 
   return True
 
@@ -31,7 +33,8 @@ def isValidJsonObject(json, type):
 def getFormattedJson(json, seed):
   outputJson = {}
   for key in seed:
-    outputJson[key] = json[key]
+    if key in json:
+      outputJson[key] = json[key]
   return outputJson
 
 def getJsonSeedFormat(json, type):
