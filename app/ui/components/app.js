@@ -6,7 +6,6 @@ import {
     ToolbarTitle} from 'material-ui'
 import {Link} from 'react-router'
 
-import Nav from './nav'
 import Footer from './footer'
 
 class App extends Component {
