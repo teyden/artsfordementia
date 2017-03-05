@@ -169,6 +169,8 @@ def uploadedFile(resource_type):
       file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
       if resource_type == "story":
         image_path = os.path.join('uploads', filename)
+
+        # Check for resource_id first, if None then proceed
         id = getNextSequence("storyid")
         db.StoryCollection.insert(
           {

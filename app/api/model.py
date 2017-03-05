@@ -45,7 +45,6 @@ ARTICLE = "article"
 STORY_SEED = {}
 STORY_SEED["title"] = ""
 STORY_SEED["description"] = ""
-STORY_SEED["image"] = ""
 STORY_SEED["media_link"] = ""
 STORY_SEED["name_of_user"] = ""
 
