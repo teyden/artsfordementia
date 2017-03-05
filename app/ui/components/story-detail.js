@@ -4,9 +4,31 @@ import { bindActionCreators } from 'redux'
 import {
     Toolbar,
     ToolbarTitle,
-    RaisedButton} from 'material-ui'
+    ToolbarGroup,
+    RaisedButton,
+    ListItem,
+    FlatButton,
+    FontIcon,
+    Avatar} from 'material-ui'
+import { Link } from 'react-router'
 
 import {fetchStoryDetail} from '../actions/index'
+
+const mainStyle = {
+    "maxWidth": "960px",
+    "margin": "auto",
+    "paddingTop": "1em",
+    "paddingBottom": "4em"
+}
+
+const raisedButtonStyle = {
+    "marginTop": "1em",
+    "float": "right"
+}
+
+const linkStyle = {
+    "textDecoration": "none"
+}
 
 class StoryDetail extends React.Component {
     componentWillMount(){
@@ -30,8 +52,17 @@ class StoryDetail extends React.Component {
 
         return (
             <div>
-                <Toolbar><ToolbarTitle text={story.title}></ToolbarTitle></Toolbar>
-
+                <img src="uploads/feature_story.jpg" style={{"width": "100%", "height": "auto"}}alt=""/>
+                <div style={mainStyle}>
+                    <RaisedButton label="back" href="/" primary={true} style={raisedButtonStyle}></RaisedButton>
+                    <a href={story.media_link} style={linkStyle}><h1 style={{"marginTop": "1em", "fontSize": "3em"}}>{story.title}</h1></a>
+                    <ListItem
+                        leftAvatar={<Avatar src=""/>}
+                        primaryText={story.name_of_user}
+                        secondaryText={story.upload_date}
+                        secondartstyle={{"marginTop": "0.5em"}}/>
+                    <p><img src={story.image} alt=""/>{story.description}</p>
+                </div>
             </div>
 
         )

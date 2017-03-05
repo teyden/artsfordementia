@@ -8,6 +8,7 @@ import App from './components/app'
 import Home from './components/home'
 import Adventures from './components/adventures'
 import About from './components/about'
+import Testimonials from './components/testimonials'
 import StoryDetail from './components/story-detail'
 import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import promise from 'redux-promise'
@@ -21,9 +22,10 @@ ReactDOM.render(
             <Router history={browserHistory}>
                 <Route path="/" component={App}>
                     <IndexRoute component={Home} />
-                    <Route path=":id" component={StoryDetail}/>
-                    <Route path="adventures" component={Adventures}/>
                     <Route path="about" component={About}/>
+                    <Route path="adventures" component={Adventures}/>
+                    <Route path="testimonials" component={Testimonials}/>
+                    <Route path=":id" component={StoryDetail}/>
                 </Route>
             </Router>
         </Provider>

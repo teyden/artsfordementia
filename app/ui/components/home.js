@@ -22,7 +22,9 @@ import { fetchStories } from '../actions/index'
 
 const mainStyle = {
     "maxWidth": "960px",
-    "margin": "auto"
+    "margin": "auto",
+    "paddingTop": "1em",
+    "paddingBottom": "4em"
 }
 
 const pinnedButtonStyle = {
@@ -97,16 +99,8 @@ class Home extends React.Component {
         }
         return (
             <div className="container">
-                <Toolbar>
-                    <ToolbarGroup firstChild={true}>
-                        <ListItem leftAvatar={<Avatar src=""/>} primaryText="Liza Futerman" />
-                    </ToolbarGroup>
-                    <ToolbarGroup>
-                        <FlatButton label="Logout" icon={<FontIcon className="fa fa-sign-out" />} />
-                    </ToolbarGroup>
-                </Toolbar>
                 <ResponsiveEmbed src="https://www.youtube.com/embed/ejhnvrOn2gI" allowFullScreen/>
-                <Toolbar><ToolbarTitle text="Insert Title Here"></ToolbarTitle></Toolbar>
+                <Toolbar><ToolbarTitle text="Share"></ToolbarTitle></Toolbar>
                 <main style={mainStyle}>
                     <TextField fullWidth={true} id="search-bar" style={searchbarStyle} floatingLabelText="Search"/>
                     <div style={gridListStyle.root}>
