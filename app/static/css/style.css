@@ -1,6 +1,12 @@
 body {
     margin: 0;
 }
+
 .container {
     width: 100%;
+}
+
+.hero {
+    width: 100%;
+    background-color: red;
 }

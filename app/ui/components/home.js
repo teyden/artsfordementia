@@ -1,5 +1,7 @@
 import React from 'react'
 import {FloatingActionButton} from 'material-ui'
+import ResponsiveEmbed from 'react-responsive-embed'
+
 import StoryDialog from './story-dialog'
 
 class Home extends React.Component {
@@ -23,11 +25,15 @@ class Home extends React.Component {
 
     render() {
         return (
-            <main>
-                <h1>Insert Title Here</h1>
-                <FloatingActionButton iconClassName="fa fa-plus" onClick={this.openDialog}/>
-                <StoryDialog open={this.state.open} closeDialog={this.closeDialog} />
-            </main>
+            <div className="container">
+                <ResponsiveEmbed src="https://www.youtube.com/embed/ejhnvrOn2gI" allowfullscreen/>
+                <main>
+                    <h1>Insert Title Here</h1>
+                    <FloatingActionButton iconClassName="fa fa-plus" onClick={this.openDialog}/>
+                    <StoryDialog open={this.state.open} closeDialog={this.closeDialog} />
+                </main>
+            </div>
+
         )
     }
 }
