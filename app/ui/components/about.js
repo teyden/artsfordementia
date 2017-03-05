@@ -2,7 +2,9 @@ import React from 'react'
 
 const mainStyle = {
     "maxWidth": "960px",
-    "margin": "auto"
+    "margin": "auto",
+    "paddingTop": "1em",
+    "paddingBottom": "4em"
 }
 
 class About extends React.Component {

@@ -21,7 +21,9 @@ import { fetchStories } from '../actions/index'
 
 const mainStyle = {
     "maxWidth": "960px",
-    "margin": "auto"
+    "margin": "auto",
+    "paddingTop": "1em",
+    "paddingBottom": "4em"
 }
 
 const pinnedButtonStyle = {
