@@ -182,4 +182,49 @@ def getArticle(article_id):
       return jsonify(article)
   return make_response('Not found.', 404)
 
+# Uploader
+import os, io
+from flask import send_file
+from werkzeug.utils import secure_filename
+
+UPLOAD_FOLDER = '/Users/teydenguyen/Personal/artsfordementia/app/static/images'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+# config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowedFile(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def getFileType(filename):
+    return filename.rsplit('.', 1)[1].lower() 
+
 # Upload method that handles two kinds of parameters
+@api.route('/api/upload/<resource_type>', methods=['GET', 'POST'])
+def uploadedFile(resource_type):
+  if request.method == 'POST':
+    # check if the post request has the file part
+    if 'file' not in request.files:
+        flash('No file part')
+        return redirect(request.url)
+    file = request.files['file']
+    print request 
+    # if user does not select file, browser also
+    # submit a empty part without filename
+    if file.filename == '':
+        flash('No selected file')
+        return redirect(request.url)
+    if file and allowedFile(file.filename):
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(UPLOAD_FOLDER, filename))
+        # return redirect(url_for('uploadedFile', filename=filename))
+        return send_file(filename, mimetype='image/' + getFileType(filename))
+  return '''
+    <!doctype html>
+    <title>Upload new File</title>
+    <h1>Upload new File</h1>
+    <form method=post enctype=multipart/form-data>
+    <input type=text value=hey>
+      <p><input type=file name=file>
+         <input type=submit value=Upload>
+    </form>
+    '''
