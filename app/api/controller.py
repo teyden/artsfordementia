@@ -161,8 +161,23 @@ def articles():
       "user_email": "afakeemailaddress@gmail.com"
     }
   """
-  pass
+  if request.method == "GET":
+    articles = []
+    for article in db.ArticleCollection.find():
+      del article['_id']
+      articles += [article]
+    return jsonify(articles=articles)
 
+  elif request.method == "POST":
+    json = request.get_json()
+    if isValidJsonObject(json, ARTICLE):
+      articleJson = makeJsonObjectProperFormat(json, ARTICLE)
+      articleJson['upload_date'] = datetime.today()
+      db.ArticleCollection.insert(articleJson)
+      return make_response('Article successfully created.', 201)
+    return make_response('Error with resource.', 409)
+  return make_response('Method not allowed.', 405)
+  
 @api.route("/api/stories/<story_id>", methods=["GET"])
 def getStory(article_id):
   """
