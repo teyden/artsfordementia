@@ -9,17 +9,33 @@ import {
     FontIcon} from 'material-ui'
 import {Link} from 'react-router'
 
+const toolbarStyle = {
+    "backgroundColor": "#00BCD4"
+}
+const toolbartitleStyle = {
+    "backgroundColor": "00BCD4",
+    "color": "white",
+    "fontFamily": "Roboto, sans-serif",
+    "fontSize": "28px"
+}
+const toolbargroupStyle = {
+    "backgroundColor": "00BCD4"
+}
+const flatbuttonStyle = {
+    "color": "white"
+}
+
 class App extends Component {
   render() {
     return (
       <div>
-            <Toolbar>
-                <ToolbarTitle text="Arts For Dementia"/>
-                <ToolbarGroup firstChild={true}>
-                    <FlatButton label="Share" href="/"></FlatButton>
-                    <FlatButton label="Adventures" href="/adventures"></FlatButton>
-                    <FlatButton label="About Us" href="/about"></FlatButton>
-                    <FlatButton label="Testimonials" href="/testimonials"></FlatButton>
+            <Toolbar style={toolbarStyle}>
+                <ToolbarTitle style={toolbartitleStyle} text="Arts For Dementia"/>
+                <ToolbarGroup style={toolbargroupStyle} firstChild={true}>
+                    <FlatButton style={flatbuttonStyle}  label="Share" href="/"></FlatButton>
+                    <FlatButton style={flatbuttonStyle}  label="Adventures" href="/adventures"></FlatButton>
+                    <FlatButton style={flatbuttonStyle}  label="About Us" href="/about"></FlatButton>
+                    <FlatButton style={flatbuttonStyle}  label="Testimonials" href="/testimonials"></FlatButton>
                 </ToolbarGroup>
             </Toolbar>
             <Toolbar>
