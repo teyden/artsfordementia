@@ -12,8 +12,11 @@ import {
     GridList,
     GridTile} from 'material-ui'
 import ResponsiveEmbed from 'react-responsive-embed'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import StoryDialog from './story-dialog'
+import { fetchStories } from '../actions/index'
 
 const mainStyle = {
     "maxWidth": "960px",
@@ -87,6 +90,10 @@ const tilesData = [
 ];
 
 class Home extends React.Component {
+    componentWillMount(){
+        this.props.fetchStories()
+    }
+
     constructor(props){
         super(props)
         this.state = {
@@ -95,6 +102,13 @@ class Home extends React.Component {
 
         this.openDialog = this.openDialog.bind(this)
         this.closeDialog = this.closeDialog.bind(this)
+    }
+
+    renderStory(story, index){
+        return <GridTile
+            key={index}
+            title={story.title}
+            subtitle={story.user_email} />
     }
 
     openDialog(){
@@ -106,6 +120,19 @@ class Home extends React.Component {
     }
 
     render() {
+        let gridItems = () => {
+            console.log(this.props.indexStories)
+            if (this.props.indexStories.stories){
+                return <GridList
+                        style={gridListStyle.gridStyle}
+                        cols={3}
+                        padding={8}
+                        cellHeight={233}>
+                        {this.props.indexStories.stories.map(this.renderStory)}
+                    </GridList>
+            }
+            return <p>Loading...</p>
+        }
         return (
             <div className="container">
                 <Toolbar>
@@ -121,18 +148,7 @@ class Home extends React.Component {
                 <main style={mainStyle}>
                     <TextField fullWidth={true} id="search-bar" style={searchbarStyle} floatingLabelText="Search"/>
                     <div style={gridListStyle.root}>
-                        <GridList
-                            style={gridListStyle.gridStyle}
-                            cols={3}
-                            padding={8}
-                            cellHeight={233}>
-                            {tilesData.map((tile) => (
-                                <GridTile
-                                    key={tile.title}
-                                    title={tile.title}
-                                    subtitle={tile.author}></GridTile>
-                            ))}
-                        </GridList>
+                        {gridItems()}
                     </div>
                     <FloatingActionButton iconClassName="fa fa-plus" onClick={this.openDialog} style={pinnedButtonStyle}/>
                     <StoryDialog open={this.state.open} closeDialog={this.closeDialog} />
@@ -143,4 +159,12 @@ class Home extends React.Component {
     }
 }
 
-export default Home
+function mapStateToProps({indexStories}){
+    return {indexStories}
+}
+
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({ fetchStories }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

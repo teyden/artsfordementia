@@ -7,6 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import App from './components/app'
 import Home from './components/home'
 import Adventures from './components/adventures'
+import About from './components/about'
 import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import promise from 'redux-promise'
 import reducers from './reducers';
@@ -20,7 +21,7 @@ ReactDOM.render(
                 <Route path="/" component={App}>
                     <IndexRoute component={Home} />
                     <Route path="adventures" component={Adventures}/>
-
+                    <Route path="about" component={About}/>
                 </Route>
             </Router>
         </Provider>

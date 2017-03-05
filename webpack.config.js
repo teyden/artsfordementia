@@ -19,6 +19,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  devtool: "eval-source-map",
   devServer: {
     historyApiFallback: true,
     contentBase: './app/templates/dev'

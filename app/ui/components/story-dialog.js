@@ -12,7 +12,6 @@ class StoryDialog extends React.Component {
             title: "",
             description: "",
             link: ""
-
         }
     }
 

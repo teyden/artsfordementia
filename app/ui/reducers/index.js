@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
+import storiesIndexReducer from './reducer_story_index'
+
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+    indexStories: storiesIndexReducer
 });
 
 export default rootReducer;
