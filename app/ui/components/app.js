@@ -17,7 +17,6 @@ class App extends Component {
                 <ToolbarGroup firstChild={true}>
                     <FlatButton label="Home" href="/"></FlatButton>
                     <FlatButton label="Adventures" href="/adventures"></FlatButton>
-                    <FlatButton label="Login"></FlatButton>
                 </ToolbarGroup>
             </Toolbar>
             { this.props.children }
