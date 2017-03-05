@@ -1,6 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import {
+    Toolbar,
+    ToolbarTitle,
+    RaisedButton} from 'material-ui'
 
 import {fetchStoryDetail} from '../actions/index'
 
@@ -10,17 +14,24 @@ class StoryDetail extends React.Component {
     }
 
     render(){
-        const story = () => {
+        const story = (() => {
             console.log(this.props)
             if (!this.props.story){
-                return <p>Loading...</p>
+                return null
             }
+            return this.props.story
+        })()
 
-            return <h1>{this.props.story.title}</h1>
+        if (!story ){
+            return (<div>
+                <p>Loading...</p>
+            </div>)
         }
+
         return (
             <div>
-                {story()}
+                <Toolbar><ToolbarTitle text={story.title}></ToolbarTitle></Toolbar>
+
             </div>
 
         )

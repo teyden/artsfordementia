@@ -6,8 +6,6 @@ import {
     ToolbarTitle} from 'material-ui'
 import {Link} from 'react-router'
 
-import Footer from './footer'
-
 class App extends Component {
   render() {
     return (
@@ -21,7 +19,6 @@ class App extends Component {
                 </ToolbarGroup>
             </Toolbar>
             { this.props.children }
-            <Footer />
       </div>
     );
   }
