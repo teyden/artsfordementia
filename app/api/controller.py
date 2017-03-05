@@ -84,15 +84,6 @@ def stories():
   """
   GET - returns a list of all stories.
   POST - creates a story provided as a JSON object
-
-  Example request:
-    {
-      "title": "Test Story",
-      "description": "A test description",
-      "image": "",
-      "media_link": "https://youtube.com/somevideo",
-      "user_email": "afakeemailaddress@gmail.com"
-    }
   """
   if request.method == "GET":
     stories = []
@@ -117,19 +108,6 @@ def adventures():
   """
   GET - returns a list of all adventures.
   POST - creates an adventure provided as a JSON object
-
-  Example request:
-    {
-      "title": "Run for Fun",
-      "category": "Exercise",
-      "name_of_place": "Some name",
-      "address": "483 Evergreen Street",
-      "event_date": "",
-      "event_time": "", 
-      "description": "Some adventure description.",
-      "tags": ["active","running","onyourfeet"],
-      "user_email": "afakeemailaddress@gmail.com"
-    }
   """
   if request.method == "GET":
     adventures = []
@@ -153,13 +131,6 @@ def articles():
   """
   GET - returns a list of all articles.
   POST - creates an article provided as a JSON object
-
-  Example request:
-    {
-      "title": "An article for clinicians",
-      "content": "Paragraphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blah blah blah blah",
-      "user_email": "afakeemailaddress@gmail.com"
-    }
   """
   if request.method == "GET":
     articles = []
@@ -177,7 +148,7 @@ def articles():
       return make_response('Article successfully created.', 201)
     return make_response('Error with resource.', 409)
   return make_response('Method not allowed.', 405)
-  
+
 @api.route("/api/stories/<story_id>", methods=["GET"])
 def getStory(article_id):
   """

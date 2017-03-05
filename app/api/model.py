@@ -10,6 +10,37 @@ STORY = "story"
 ADVENTURE = "adventure"
 ARTICLE = "article"
 
+"""
+  Story
+    {
+      "title": "Test Story",
+      "description": "A test description",
+      "image": "",
+      "media_link": "https://youtube.com/somevideo",
+      "user_email": "afakeemailaddress@gmail.com"
+    }
+    
+  Adventure
+    {
+      "title": "Run for Fun",
+      "category": "Exercise",
+      "name_of_place": "Some name",
+      "address": "483 Evergreen Street",
+      "event_date": "",
+      "event_time": "", 
+      "description": "Some adventure description.",
+      "tags": ["active","running","onyourfeet"],
+      "user_email": "afakeemailaddress@gmail.com"
+    }
+
+  Article
+    {
+      "title": "An article for clinicians",
+      "content": "Paragraphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blah blah blah blah",
+      "user_email": "afakeemailaddress@gmail.com"
+    }
+"""
+
 # Data seeds
 STORY_SEED = {}
 STORY_SEED["title"] = ""
