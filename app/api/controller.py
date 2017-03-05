@@ -8,6 +8,11 @@ from datetime import datetime
 from flask import render_template, url_for, flash
 from flask import make_response, request, redirect, jsonify, send_from_directory
 
+# Set cross-origin resource sharing
+from flask_cors import CORS, cross_origin
+from app import app
+CORS(app)
+
 # Import model
 from app.api.model import db
 from app.api.model import STORY, ADVENTURE, ARTICLE
