@@ -96,14 +96,6 @@ class Home extends React.Component {
         }
         return (
             <div className="container">
-                <Toolbar>
-                    <ToolbarGroup firstChild={true}>
-                        <ListItem leftAvatar={<Avatar src=""/>} primaryText="Liza Futerman" />
-                    </ToolbarGroup>
-                    <ToolbarGroup>
-                        <FlatButton label="Logout" icon={<FontIcon className="fa fa-sign-out" />} />
-                    </ToolbarGroup>
-                </Toolbar>
                 <ResponsiveEmbed src="https://www.youtube.com/embed/ejhnvrOn2gI" allowFullScreen/>
                 <Toolbar><ToolbarTitle text="Insert Title Here"></ToolbarTitle></Toolbar>
                 <main style={mainStyle}>
