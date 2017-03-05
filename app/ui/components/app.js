@@ -16,9 +16,10 @@ class App extends Component {
             <Toolbar>
                 <ToolbarTitle text="Arts For Dementia"/>
                 <ToolbarGroup firstChild={true}>
-                    <FlatButton label="Home" href="/"></FlatButton>
+                    <FlatButton label="Share" href="/"></FlatButton>
                     <FlatButton label="Adventures" href="/adventures"></FlatButton>
                     <FlatButton label="About Us" href="/about"></FlatButton>
+                    <FlatButton label="Testimonials" href="/testimonials"></FlatButton>
                 </ToolbarGroup>
             </Toolbar>
             <Toolbar>

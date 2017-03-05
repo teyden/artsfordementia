@@ -97,7 +97,7 @@ class Home extends React.Component {
         return (
             <div className="container">
                 <ResponsiveEmbed src="https://www.youtube.com/embed/ejhnvrOn2gI" allowFullScreen/>
-                <Toolbar><ToolbarTitle text="Insert Title Here"></ToolbarTitle></Toolbar>
+                <Toolbar><ToolbarTitle text="Share"></ToolbarTitle></Toolbar>
                 <main style={mainStyle}>
                     <TextField fullWidth={true} id="search-bar" style={searchbarStyle} floatingLabelText="Search"/>
                     <div style={gridListStyle.root}>
