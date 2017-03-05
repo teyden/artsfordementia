@@ -27,7 +27,8 @@ const raisedButtonStyle = {
 }
 
 const linkStyle = {
-    "textDecoration": "none"
+    "textDecoration": "none",
+    "color": "#00bcd4"
 }
 
 class StoryDetail extends React.Component {
@@ -52,7 +53,7 @@ class StoryDetail extends React.Component {
 
         return (
             <div>
-                <img src="uploads/feature_story.jpg" style={{"width": "100%", "height": "auto"}}alt=""/>
+                <img src="uploads/feature_story.jpg" style={{"width": "100%", "height": "auto", "float": "right"}} alt=""/>
                 <div style={mainStyle}>
                     <RaisedButton label="back" href="/" primary={true} style={raisedButtonStyle}></RaisedButton>
                     <a href={story.media_link} style={linkStyle}><h1 style={{"marginTop": "1em", "fontSize": "3em"}}>{story.title}</h1></a>
