@@ -11,7 +11,8 @@ import {
     FontIcon,
     TextField,
     GridList,
-    GridTile} from 'material-ui'
+    GridTile,
+    pink500} from 'material-ui'
 import ResponsiveEmbed from 'react-responsive-embed'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
