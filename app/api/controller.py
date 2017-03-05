@@ -150,24 +150,36 @@ def articles():
   return make_response('Method not allowed.', 405)
 
 @api.route("/api/stories/<story_id>", methods=["GET"])
-def getStory(article_id):
+def getStory(story_id):
   """
   Returns a single story.
   """
-  pass
+  if request.method == "GET":
+    for story in db.StoryCollection.find({"id": story_id}):
+      del story['_id']
+      return jsonify(story)
+  return make_response('Not found.', 404)
 
 @api.route("/api/adventures/<adventure_id>", methods=["GET"])
 def getAdventure(adventure_id):
   """
   Returns a single adventure.
   """
-  pass
+  if request.method == "GET":
+    for adventure in db.AdventureCollection.find({"id": adventure_id}):
+      del adventure['_id']
+      return jsonify(adventure)
+  return make_response('Not found.', 404)
 
 @api.route("/api/articles/<article_id>", methods=["GET"])
 def getArticle(article_id):
   """
   Returns a single article.
   """
-  pass
+  if request.method == "GET":
+    for article in db.ArticleCollection.find({"id": article_id}):
+      del article['_id']
+      return jsonify(article)
+  return make_response('Not found.', 404)
 
 # Upload method that handles two kinds of parameters
