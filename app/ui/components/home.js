@@ -108,7 +108,9 @@ class Home extends React.Component {
         return <GridTile
             key={index}
             title={story.title}
-            subtitle={story.user_email} />
+            subtitle={story.user_email}>
+                <img src={story.image} alt=""/>
+            </GridTile>
     }
 
     openDialog(){
