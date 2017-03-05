@@ -1,4 +1,4 @@
-import {FETCH_STORIES} from '../actions/index'
+import {FETCH_STORIES, FETCH_STORY_DETAIL} from '../actions/index'
 
 const INITIAL_STATE = {
     stories: [
@@ -48,6 +48,7 @@ const INITIAL_STATE = {
 export default function(state=INITIAL_STATE, action={}){
     const actionLookup = {
         FETCH_STORIES: () => ({...state, stories: action.payload.data.stories}),
+        FETCH_STORY_DETAIL: () => ({...state, story: action.payload.data}),
         DEFAULT: () => state
     }
 

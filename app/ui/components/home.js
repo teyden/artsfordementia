@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 import {
     FloatingActionButton,
     FlatButton,
@@ -10,7 +11,8 @@ import {
     FontIcon,
     TextField,
     GridList,
-    GridTile} from 'material-ui'
+    GridTile,
+    pink500} from 'material-ui'
 import ResponsiveEmbed from 'react-responsive-embed'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -46,49 +48,6 @@ const gridListStyle = {
     }
 }
 
-const tilesData = [
-  {
-    img: '',
-    title: 'Breakfast',
-    author: 'jill111',
-  },
-  {
-    img: '',
-    title: 'Tasty burger',
-    author: 'pashminu',
-  },
-  {
-    img: '',
-    title: 'Camera',
-    author: 'Danson67',
-  },
-  {
-    img: '',
-    title: 'Morning',
-    author: 'fancycrave1',
-  },
-  {
-    img: '',
-    title: 'Hats',
-    author: 'Hans',
-  },
-  {
-    img: '',
-    title: 'Honey',
-    author: 'fancycravel',
-  },
-  {
-    img: '',
-    title: 'Vegetables',
-    author: 'jill111',
-  },
-  {
-    img: '',
-    title: 'Water plant',
-    author: 'BkrmadtyaKarki',
-  },
-];
-
 class Home extends React.Component {
     componentWillMount(){
         this.props.fetchStories()
@@ -105,12 +64,13 @@ class Home extends React.Component {
     }
 
     renderStory(story, index){
-        return <GridTile
-            key={index}
-            title={story.title}
-            subtitle={story.user_email}>
-                <img src={story.image} alt=""/>
+        return <Link to={`/${index}`} key={index}>
+            <GridTile
+                title={story.title}
+                subtitle={story.user_email}>
+                    <img src={story.image} alt=""/>
             </GridTile>
+        </Link>
     }
 
     openDialog(){
