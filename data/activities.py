@@ -1,0 +1,98 @@
+L = [{
+    "title": "Alzheimer’s society of Toronto:Music Project",
+    "category": "Music",
+    "name_of_place": "Alzheimer’s society of Toronto",
+    "address": "http://alz.to/get-help/music-project/",
+    "description": "Music can allow a person living with dementia to rediscover pleasure in the world. The Alzheimer Society Music Project was created in response to overwhelming evidence showing the beneficial effects of music and stimulation on people living with dementia. <br><br>Through the Music Project, personalized playlists are provided FREE of cost to support a person living with dementia and improve their quality of life.",
+    "tags": ["Music”,”Alzheimer”,”Personalized”],
+    "user_email": “fairview3025@gmail.com”
+},
+{
+    "title": "Artsoculus: Innovative arts-based learning programs for people with dementia and other lifelong learners",
+    "category": “Painting”,
+    "name_of_place": "Artsoculus headquarters",
+    "address": "http://www.artsoculus.com/for-people-with-dementia.php",
+    "description": "Sartsoculus offers a range of arts-based learning programs and workshops for people with dementia. Whether working one-to-one, with a care partners or with a small group, all programs offer opportunities for peer engagement, expression and opportunities to develop artistic skills, technique and style.",
+    "tags": [“Artprogram”,”Art”],
+    "user_email": “justdementia307@gmail.com”
+},
+{
+    "title": "Baycrest: Draw it like you know it“,
+    "category": “Painting”,
+    "name_of_place": “Baycrest”,
+    "address": "3560 Bathurst St, Toronto, ON M6A 2E1",
+    "description": "Artsoculus offers a range of arts-based learning programs and workshops for people with dementia. Whether working one-to-one, with a care partners or with a small group, all programs offer opportunities for peer engagement, expression and opportunities to develop artistic skills, technique and style.",
+    "tags": [“Workshop”,”Art”,”Dementia”],
+    "user_email": “baycrest495@gmail.com”
+},
+{
+    "title": “Music for the heart“,
+    "category": “Music”,
+    "name_of_place": “Don Vally Art Club”,
+    "address": “877 Young St, Toronto ON M4W 3M2”,
+    "description": "Sartsoculus offers a range of arts-based learning programs and workshops for people with dementia. Whether working one-to-one, with a care partners or with a small group, all programs offer opportunities for peer engagement, expression and opportunities to develop artistic skills, technique and style.",
+    "tags": [“Music”,”Art”,”Onyourfeet"],
+    "user_email": “mayto486jk@gmail.com"
+},
+{
+    "title": “Celebrating Good Old St. Patrick’s”,
+    "category": “Crafts ”,
+    "name_of_place": “Davenhill Senior Living”,
+    "address": “3035 Danforth Ave, Toronto, ON M3C 1N2”,
+    "description": "Sartsoculus offers a range of arts-based learning programs and workshops for people with dementia. Whether working one-to-one, with a care partners or with a small group, all programs offer opportunities for peer engagement, expression and opportunities to develop artistic skills, technique and style.",
+    "tags": ["active","running","onyourfeet"],
+    "user_email": “sleepybeauty305@gmail.com"
+},
+{
+    "title": “Green Care Farm“,
+    "category": “Nature”,
+    "name_of_place": "Old York Tower“,
+    "address": “3845 Sheppard Ave E”,
+    "description": "Sartsoculus offers a range of arts-based learning programs and workshops for people with dementia. Whether working one-to-one, with a care partners or with a small group, all programs offer opportunities for peer engagement, expression and opportunities to develop artistic skills, technique and style.",
+    "tags": [“Nature”,”Gardening”,”Farm”],
+    "user_email": “dementiahack3017@gmail.com"
+},
+{
+    "title": “Laugh it out Initiative“,
+    "category": “Improv”,
+    "name_of_place": “Rexdale Senior care”,
+    "address": " 1284 Dundas St W Toronto”,
+    "description": "Sartsoculus offers a range of arts-based learning programs and workshops for people with dementia. Whether working one-to-one, with a care partners or with a small group, all programs offer opportunities for peer engagement, expression and opportunities to develop artistic skills, technique and style.",
+    "tags": ["Yoga","Laughter"],
+    "name_of_user": "Hayley Hobson",
+    "image": "uploads/img_laughitout_233x310.jpg"
+},
+{
+    "title": "Arts In the ROM",
+    "category": "Museum",
+    "name_of_place": "ROM",
+    "address": "100 Queens Park, Toronto, ON M5S 2C6",
+    "description": "Sartsoculus offers a range of arts-based learning programs and workshops for people with dementia. Whether working one-to-one, with a care partners or with a small group, all programs offer opportunities for peer engagement, expression and opportunities to develop artistic skills, technique and style.",
+    "tags": ["Arts","Alzheimers"],
+    "name_of_user": "John Wood",
+    "image": "uploads/img_artsintherom_233x310.jpg"
+},
+{
+    "title": "Community Engagement at Dixon Hall",
+    "category": "Crafts",
+    "name_of_place": "Dixon Hall",
+    "address": "402 Shuter St, Toronto, ON M5A 1X6",
+    "description": "Program activities are geared toward participants' interests, likes and abilities, such as expressive art therapy, music, pet therapy, arts & crafts, exercises, floor & table games and special outings. A hot noon-time meal and snacks are provided daily. We are able to accommodate special diets. The Alzheimer Day Program caters to older adults and/or seniors who have a cognitive impairment.",
+    "tags": ["Community","Dayprogram"],
+    "image": "img_dixonhall_233x310.jpg"
+    "name_of_user": "Jenny De Courcy"
+}]
+
+
+Jenny De Courcy
+2. Audrey Miller
+3. Kathy Keaton
+4. John Wood
+5. Jim A. Harper
+6. Hayley Hobson
+7. Roger Zelazny
+8. Amanda Messerlie
+9. Jackie Hong
+10. Pamela Delaney
+11. Michelle Otero
+12. Anne Lamont

@@ -1,0 +1,10 @@
+[{
+    "title": "An article for clinicians",
+    "content": "Paragraphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blah blah blah blah",
+    "user_email": "afakeemailaddress@gmail.com"
+},
+{
+    "title": "An article for clinicians",
+    "content": "Paragraphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blaphs of content blah blah blah blah",
+    "user_email": "afakeemailaddress@gmail.com"
+}]

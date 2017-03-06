@@ -1,0 +1,18 @@
+[{
+    "title": "Run for Fun",
+    "category": "Exercise",
+    "name_of_place": "Some name",
+    "address": "483 Evergreen Street",
+    "description": "Some adventure description.",
+    "tags": ["active","running","onyourfeet"],
+    "user_email": "afakeemailaddress@gmail.com"
+},
+{
+    "title": "Run for Fun",
+    "category": "Exercise",
+    "name_of_place": "Some name",
+    "address": "483 Evergreen Street",
+    "description": "Some adventure description.",
+    "tags": ["active","running","onyourfeet"],
+    "user_email": "afakeemailaddress@gmail.com"
+}]
